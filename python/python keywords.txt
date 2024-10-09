@@ -1,0 +1,378 @@
+Keyword Breakdown
+
+    False: A Boolean value.
+    None: Represents the absence of a value.
+    True: A Boolean value.
+    and: Logical operator.
+    as: Used for aliasing.
+    assert: Checks conditions for debugging.
+    async: Defines an asynchronous function.
+    await: Pauses execution until a task completes.
+    break: Exits a loop.
+    class: Defines a class.
+    continue: Skips to the next iteration of a loop.
+    def: Defines a function.
+    del: Deletes a variable.
+    elif: Used in conditional statements.
+    else: Follows if and elif when conditions are false.
+    except: Catches exceptions.
+    finally: Executes code regardless of exceptions.
+    for: Iterates over a sequence.
+    from: Imports specific parts of a module.
+    import: Imports a module.
+    global: Declares a global variable.
+    if: Starts a conditional statement.
+    in: Checks membership in a sequence.
+    is: Checks identity (same object).
+    lambda: Creates an anonymous function.
+    nonlocal: Refers to a variable in an outer (non-global) scope.
+    not: Logical negation.
+    or: Logical operator.
+    pass: Placeholder that does nothing.
+    raise: Raises an exception.
+    return: Exits a function and returns a value.
+    try: Starts a block to catch exceptions.
+    while: Starts a loop that continues while a condition is true.
+    with: Context manager for resource management (like files).
+    yield: Produces a value from a generator function.
+
+
+
+
+1. False, True, None
+
+    False and True are Boolean values.
+    None represents a null value or no value.
+
+Example:
+
+python
+
+is_valid = True
+name = None
+
+2. and, or, not
+
+    and: True if both operands are true.
+    or: True if at least one operand is true.
+    not: Inverts the Boolean value.
+
+Example:
+
+python
+
+print(True and False)  # False
+print(True or False)   # True
+print(not True)        # False
+
+3. as
+
+Used to create an alias for a module.
+
+Example:
+
+python
+
+import math as m
+print(m.sqrt(16))  # Outputs: 4.0
+
+4. assert
+
+Used for debugging, checks if a condition is true. If not, it raises an error.
+
+Example:
+
+python
+
+assert 1 + 1 == 2  # This will not raise an error.
+
+5. async, await
+
+Used for writing asynchronous code. async defines an asynchronous function, and await pauses the execution until a task is complete.
+
+Example:
+
+python
+
+import asyncio
+
+async def greet():
+    await asyncio.sleep(1)
+    return "Hello!"
+
+# Call the async function within an event loop
+
+6. break
+
+Exits a loop.
+
+Example:
+
+python
+
+for i in range(5):
+    if i == 3:
+        break  # Exits the loop
+    print(i)
+
+7. class
+
+Defines a new class (a blueprint for creating objects).
+
+Example:
+
+python
+
+class Dog:
+    def bark(self):
+        return "Woof!"
+
+8. continue
+
+Skips the current iteration and goes to the next one.
+
+Example:
+
+python
+
+for i in range(5):
+    if i == 2:
+        continue  # Skip when i is 2
+    print(i)
+
+9. def
+
+Defines a function.
+
+Example:
+
+python
+
+def say_hello():
+    print("Hello!")
+
+10. del
+
+Deletes an object.
+
+Example:
+
+python
+
+x = 10
+del x  # x is deleted
+
+11. elif, else
+
+Used in conditional statements. elif is short for "else if," and else defines what to do if the condition is false.
+
+Example:
+
+python
+
+if x > 0:
+    print("Positive")
+elif x < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+12. except, finally
+
+Used in exception handling. except catches exceptions, and finally runs code regardless of an error.
+
+Example:
+
+python
+
+try:
+    print(1 / 0)  # This will cause an error
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+finally:
+    print("This will run no matter what.")
+
+13. for
+
+Used to iterate over a sequence (like a list).
+
+Example:
+
+python
+
+for i in range(5):
+    print(i)
+
+14. from, import
+
+Used to import modules into your code.
+
+Example:
+
+python
+
+from math import sqrt
+print(sqrt(16))  # Outputs: 4.0
+
+15. global
+
+Declares a variable as global, allowing it to be modified inside functions.
+
+Example:
+
+python
+
+x = 5
+
+def modify():
+    global x
+    x = 10
+
+modify()
+print(x)  # Outputs: 10
+
+16. if
+
+Used for conditional statements.
+
+Example:
+
+python
+
+if True:
+    print("It's true!")
+
+17. in
+
+Checks if a value exists in a sequence (like a list).
+
+Example:
+
+python
+
+my_list = [1, 2, 3]
+print(2 in my_list)  # Outputs: True
+
+18. is
+
+Checks if two variables point to the same object.
+
+Example:
+
+python
+
+a = [1, 2]
+b = a
+print(a is b)  # Outputs: True
+
+19. lambda
+
+Creates an anonymous function (a function without a name).
+
+Example:
+
+python
+
+square = lambda x: x ** 2
+print(square(4))  # Outputs: 16
+
+20. nonlocal
+
+Declares a variable as non-local, allowing modification of a variable in an enclosing scope.
+
+Example:
+
+python
+
+def outer():
+    x = "local"
+    def inner():
+        nonlocal x
+        x = "nonlocal"
+        return x
+    return inner()
+
+print(outer())  # Outputs: nonlocal
+
+21. pass
+
+A placeholder statement; does nothing and is used when a statement is syntactically required.
+
+Example:
+
+python
+
+def empty_function():
+    pass  # No action is taken here
+
+22. raise
+
+Used to raise an exception.
+
+Example:
+
+python
+
+raise ValueError("An error occurred!")
+
+23. return
+
+Exits a function and optionally returns a value.
+
+Example:
+
+python
+
+def add(a, b):
+    return a + b
+
+24. try
+
+Starts a block of code that will be tested for errors.
+
+Example:
+
+python
+
+try:
+    print(1 / 0)  # This will cause an error
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+
+25. while
+
+Starts a loop that continues as long as a condition is true.
+
+Example:
+
+python
+
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+
+26. with
+
+Used for resource management, like file handling, ensuring proper cleanup.
+
+Example:
+
+python
+
+with open('file.txt', 'w') as f:
+    f.write('Hello!')
+
+27. yield
+
+Used in a generator function to yield a value back to the caller without losing the function's state.
+
+Example:
+
+python
+
+def count_up_to(max):
+    count = 1
+    while count <= max:
+        yield count  # Yields the current count
+        count += 1
